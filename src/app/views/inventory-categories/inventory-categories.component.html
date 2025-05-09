@@ -1,0 +1,349 @@
+<div class="min-h-screen bg-gray-100 flex">
+    <app-sidebar></app-sidebar>
+    <div class="flex-1 overflow-auto">
+    <!-- Header con barra de búsqueda y perfil -->
+    <header class="bg-white p-4 border-b shadow-sm">
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="w-full max-w-xl mx-auto">
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="Search"
+              class="w-full pl-10 pr-4 py-2 rounded-full border bg-white shadow-sm"
+            />
+            <div class="absolute inset-y-0 left-0 pl-3 flex items-center">
+              <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <span class="text-gray-700 font-medium">Ana Cecilia</span>
+          <svg class="w-5 h-5 ml-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <nav class="bg-white border-b py-2">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center text-sm">
+          <a href="/" class="text-gray-500">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+          </a>
+          <span class="mx-2">/</span>
+          <a href="/inventory" class="text-gray-500">Inventory</a>
+          <span class="mx-2">/</span>
+          <span class="text-gray-800">View Category</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container mx-auto px-4 py-6">
+      <h1 class="text-xl font-bold text-gray-800 mb-6">Browser by Category</h1>
+      
+      <!-- Categorías Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Categoría 1 - Cubeta de Nieve -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+          <div class="bg-blue-100 py-3 px-4">
+            <h2 class="text-center text-xl font-semibold">Cubeta de Nieve</h2>
+          </div>
+          
+          <!-- Productos en esta categoría -->
+          <div class="divide-y divide-dashed divide-gray-200">
+            <!-- Producto 1 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Arcoíris" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Arcoíris</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">2</div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Chicle" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Chicle</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">3</div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Chocolate Chip" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Chocolate Chip</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">3</div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Cereza Negra" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Cereza Negra</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">1</div>
+            </div>
+            
+            <!-- Producto 5 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Pay de queso con frambuesa" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Pay de queso con frambuesa</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">4</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Categoría 2 - Thrifty Pack -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+          <div class="bg-orange-200 py-3 px-4">
+            <h2 class="text-center text-xl font-semibold">Thrifty Pack</h2>
+          </div>
+          
+          <!-- Productos en esta categoría -->
+          <div class="divide-y divide-dashed divide-gray-200">
+            <!-- Producto 1 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="TP Sabor vainilla" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">TP Sabor vainilla</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">22</div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="TP Sabor pistache" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">TP Sabor pistache</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">18</div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="TP Sabor chocolate" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">TP Sabor chocolate</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">12</div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="TP Sabor arcoíris" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">TP Sabor arcoíris</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">20</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Categoría 3 - Conos -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+          <div class="bg-green-100 py-3 px-4">
+            <h2 class="text-center text-xl font-semibold">Conos</h2>
+          </div>
+          
+          <!-- Productos en esta categoría -->
+          <div class="divide-y divide-dashed divide-gray-200">
+            <!-- Producto 1 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Cono Azucar" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Cono Azucar</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">54</div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Cono Galleta" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Cono Galleta</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">32</div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Cono Waffle" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Cono Waffle</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">88</div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Cono Waffle Cacahuate" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Cono Waffle Cacahuate</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">21</div>
+            </div>
+            
+            <!-- Producto 5 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Copa Waffle" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Copa Waffle</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">29</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Categoría 4 - Vasos -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+          <div class="bg-yellow-100 py-3 px-4">
+            <h2 class="text-center text-xl font-semibold">Vasos</h2>
+          </div>
+          
+          <!-- Productos en esta categoría -->
+          <div class="divide-y divide-dashed divide-gray-200">
+            <!-- Producto 1 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Vaso Sundae" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Vaso Sundae</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">94</div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="8 Oz" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">8 Oz</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">66</div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="12 Oz" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">12 Oz</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">12</div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="16 Oz" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">16 Oz</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">33</div>
+            </div>
+            
+            <!-- Producto 5 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="20 Oz" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">20 Oz</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">58</div>
+            </div>
+            
+            <!-- Producto 6 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="32 Oz" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">32 Oz</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">49</div>
+            </div>
+            
+            <!-- Producto 7 -->
+            <div class="flex items-center p-4">
+              <div class="flex-shrink-0 w-16">
+                <img src="/placeholder.svg" alt="Café 12 Oz" class="h-16 object-contain" />
+              </div>
+              <div class="ml-4 flex-grow">
+                <h3 class="font-semibold">Café 12 Oz</h3>
+                <p class="text-sm text-gray-600 italic">En existencia</p>
+              </div>
+              <div class="ml-auto text-2xl font-semibold">16</div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+</div>
+  </div>

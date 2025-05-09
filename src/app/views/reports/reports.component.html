@@ -1,0 +1,212 @@
+<div class="min-h-screen bg-gray-100 flex">
+    <app-sidebar></app-sidebar>
+
+  <div class="flex-1 overflow-auto">
+    <!-- Header con barra de búsqueda y perfil -->
+    <header class="bg-white shadow-sm border-b">
+      <div
+        class="container mx-auto px-4 py-3 flex items-center justify-between"
+      >
+        <div class="relative w-full max-w-md">
+          <div
+            class="absolute inset-y-0 left-3 flex items-center pointer-events-none"
+          >
+            <svg
+              class="h-4 w-4 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+          <input
+            type="text"
+            placeholder="Search"
+            class="pl-10 pr-4 py-2 w-full rounded-full border border-gray-200 shadow-sm"
+          />
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-gray-800 font-medium">Ana Cecilia</span>
+          <button class="p-1">
+            <svg
+              class="h-4 w-4 text-gray-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navegación de migas de pan -->
+    <div class="bg-gray-100 border-b">
+      <div
+        class="container mx-auto px-4 py-2 flex items-center space-x-2 text-sm"
+      >
+        <a href="/" class="text-gray-600 hover:text-gray-900">
+          <svg
+            class="h-4 w-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            ></path>
+          </svg>
+        </a>
+        <span class="text-gray-400">/</span>
+        <a href="/report" class="text-gray-600 hover:text-gray-900">Report</a>
+        <span class="text-gray-400">/</span>
+        <span class="text-gray-800">View report</span>
+      </div>
+    </div>
+
+    <!-- Contenido principal con tarjetas -->
+    <main class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <!-- Sección de Inventario -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="bg-blue-200 py-3 px-4">
+            <h2 class="text-xl font-semibold text-gray-800">Inventario</h2>
+          </div>
+          <div class="p-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 1</span
+                >
+              </div>
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 2</span
+                >
+              </div>
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 3</span
+                >
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 4</span
+                >
+              </div>
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 5</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de Ventas -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="bg-orange-100 py-3 px-4">
+            <h2 class="text-xl font-semibold text-gray-800">Ventas</h2>
+          </div>
+          <div class="p-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 1</span
+                >
+              </div>
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 2</span
+                >
+              </div>
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 3</span
+                >
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 4</span
+                >
+              </div>
+              <div
+                class="bg-gray-200 rounded-lg p-4 flex items-center justify-center"
+              >
+                <span class="text-lg font-medium text-gray-800"
+                  >Sucursal 5</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Ordenes -->
+      <div class="bg-white rounded-lg shadow overflow-hidden mx-auto max-w-3xl">
+        <div class="bg-green-100 py-3 px-4">
+          <h2 class="text-xl font-semibold text-gray-800">Ordenes</h2>
+        </div>
+        <div class="p-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div
+              class="bg-gray-200 rounded-lg p-4 flex flex-col items-center justify-center"
+            >
+              <span class="text-lg font-medium text-gray-800 text-center"
+                >Registro de Movimientos</span
+              >
+              <span class="text-gray-600">De esta Semana</span>
+            </div>
+            <div
+              class="bg-gray-200 rounded-lg p-4 flex flex-col items-center justify-center"
+            >
+              <span class="text-lg font-medium text-gray-800 text-center"
+                >Registro de Movimientos</span
+              >
+              <span class="text-gray-600">Todo el tiempo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
