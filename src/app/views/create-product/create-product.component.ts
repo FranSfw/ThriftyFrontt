@@ -11,7 +11,7 @@ import { Product, ProductCategory } from '../login/user.model';
   standalone: true,
   imports: [SidebarComponent, CommonModule, FormsModule],
   templateUrl: './create-product.component.html',
-  styles: ``,
+  styles: ``
 })
 export class CreateProductComponent {
   // Product model
@@ -20,10 +20,12 @@ export class CreateProductComponent {
     productName: '',
     description: '',
     category: ProductCategory.DRINKS, // Default category
+    price: 0,
+    cost: 0,
     initialQuantity: 0,
     imageSrc: '',
     addedAt: new Date(),
-    branchId: 1, // Default branch ID, you might want to make this dynamic
+    branchId: 2 // Default branch ID, you might want to make this dynamic
   };
 
   // For form handling
@@ -31,8 +33,11 @@ export class CreateProductComponent {
   errorMessage: string = '';
   successMessage: string = '';
   categories = Object.values(ProductCategory);
-
-  constructor(private productService: ProductService, private router: Router) {}
+  
+  constructor(
+    private productService: ProductService,
+    private router: Router
+  ) {}
 
   // Method to create a new product
   createNewProduct(): void {
@@ -55,7 +60,7 @@ export class CreateProductComponent {
         console.log('Product created successfully:', response);
         this.successMessage = 'Product created successfully!';
         this.isLoading = false;
-
+        
         // Reset form or redirect
         setTimeout(() => {
           this.router.navigate(['/inventory']);
@@ -63,10 +68,9 @@ export class CreateProductComponent {
       },
       error: (error) => {
         console.error('Error creating product:', error);
-        this.errorMessage =
-          error.message || 'Failed to create product. Please try again.';
+        this.errorMessage = error.message || 'Failed to create product. Please try again.';
         this.isLoading = false;
-      },
+      }
     });
   }
 }

@@ -14,8 +14,10 @@ export const routes: Routes = [
     { path: 'dashboard', component: DashboardComponent },
     { path: 'create-product', component: CreateProductComponent },
     { path: 'inventory', component: InventoryComponent },
+    // { path: 'inventory/:id', component: },
     { path: 'inventory-categories', component: InventoryCategoriesComponent },
     { path: 'reports', component: ReportsComponent },
     { path: 'orders', component: OrdersComponent },
+
     { path: '**', redirectTo: 'login' },
 ];
