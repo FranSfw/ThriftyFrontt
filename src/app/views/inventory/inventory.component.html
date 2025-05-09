@@ -1,0 +1,570 @@
+<div class="min-h-screen bg-gray-50 flex">
+  <app-sidebar></app-sidebar>
+  <div class="flex-1 overflow-auto">
+    <!-- Header -->
+    <header class="w-full bg-white py-3 px-4 shadow-sm">
+      <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <!-- Search Bar -->
+        <div class="relative w-full max-w-md">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center pl-3 pointer-events-none"
+          >
+            <!-- Search icon -->
+            <svg
+              class="w-4 h-4 text-gray-400"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+          <input
+            type="search"
+            class="w-full pl-10 pr-4 py-2 rounded-full border border-gray-300 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-gray-300"
+            placeholder="Search"
+          />
+        </div>
+
+        <!-- User Profile -->
+        <div class="flex items-center gap-2">
+          <span class="text-gray-700 font-medium text-lg">Ana Cecilia</span>
+          <svg
+            class="w-5 h-5 text-gray-500"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="max-w-7xl mx-auto px-4 py-2">
+      <nav class="flex" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2">
+          <li class="inline-flex items-center">
+            <a
+              href="/"
+              class="inline-flex items-center text-gray-700 hover:text-gray-900"
+            >
+              <svg
+                class="w-4 h-4 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                ></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <div class="flex items-center">
+              <span class="mx-2 text-gray-400">/</span>
+              <a href="#" class="text-gray-700 hover:text-gray-900"
+                >Inventory</a
+              >
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto p-4">
+      <div class="flex justify-between items-center mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">Inventory Summary</h1>
+        <a href="/create-product">
+          <button
+            class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded flex items-center gap-1"
+          >
+            <span>+ Add New Product</span>
+          </button></a
+        >
+      </div>
+
+      <!-- Summary Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <!-- Product Summary Card -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-start mb-4">
+              <div class="bg-blue-100 rounded p-2 mr-4">
+                <svg
+                  class="w-8 h-8 text-blue-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <h2 class="text-xl font-bold">Product Summary</h2>
+            </div>
+
+            <div class="flex justify-between text-center mt-8">
+              <div>
+                <p class="text-gray-600 mb-2">All Products</p>
+                <p class="text-3xl font-bold">350</p>
+              </div>
+              <div>
+                <p class="text-gray-600 mb-2">In Store</p>
+                <p class="text-3xl font-bold">210</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Card -->
+        <div class="bg-white rounded-lg shadow overflow-hidden">
+          <div class="p-6">
+            <div class="flex items-start mb-4">
+              <div class="bg-amber-100 rounded p-2 mr-4">
+                <svg
+                  class="w-8 h-8 text-amber-500"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </div>
+              <h2 class="text-xl font-bold">Category</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+              <div
+                class="border border-blue-200 rounded-md p-4 text-center hover:bg-blue-50"
+              >
+                <p>Cubetas de nieve</p>
+              </div>
+              <div
+                class="border border-orange-200 rounded-md p-4 text-center hover:bg-orange-50"
+              >
+                <p>Thrifty Pack</p>
+              </div>
+              <div
+                class="border border-green-200 rounded-md p-4 text-center hover:bg-green-50"
+              >
+                <p>Conos</p>
+              </div>
+              <div
+                class="border border-yellow-200 rounded-md p-4 text-center hover:bg-yellow-50"
+              >
+                <p>Vasos</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventory Table -->
+      <div class="bg-white rounded-lg shadow mt-8">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold">Inventory Summary</h2>
+            <div class="flex gap-2">
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                >
+                  <!-- Search icon -->
+                  <svg
+                    class="w-4 h-4 text-gray-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  type="search"
+                  class="pl-10 pr-4 py-2 border rounded-md w-64"
+                  placeholder="Search"
+                />
+              </div>
+              <button
+                class="flex items-center gap-1 px-4 py-2 border rounded-md"
+              >
+                <!-- Filter icon -->
+                <svg
+                  class="w-4 h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                  />
+                </svg>
+                Filter
+              </button>
+              <button
+                class="flex items-center gap-1 px-4 py-2 border rounded-md"
+              >
+                <!-- Sort icon -->
+                <svg
+                  class="w-4 h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"
+                  />
+                </svg>
+                Sort
+              </button>
+            </div>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full divide-y divide-gray-200">
+              <thead class="bg-gray-50">
+                <tr>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-12"
+                  >
+                    <input
+                      type="checkbox"
+                      class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Product Name
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Category
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Unit Price
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    In Stock
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Discount
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    Total Value
+                  </th>
+                  <th
+                    scope="col"
+                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                  >
+                    In Store
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="bg-white divide-y divide-gray-200">
+                <!-- Row 1 -->
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <input
+                      type="checkbox"
+                      class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">TP Sabor vainilla</td>
+                  <td class="px-6 py-4 whitespace-nowrap">Thrifty Pack</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$200</td>
+                  <td class="px-6 py-4 whitespace-nowrap">23</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$10</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$4,370</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-center">
+                    <!-- Eye icon -->
+                    <svg
+                      class="w-5 h-5 mx-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+
+                <!-- Row 2 -->
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <input
+                      type="checkbox"
+                      class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">TP Sabor pistache</td>
+                  <td class="px-6 py-4 whitespace-nowrap">Thrifty Pack</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$200</td>
+                  <td class="px-6 py-4 whitespace-nowrap">7</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$10</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$1,680</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-center">
+                    <!-- Eye icon -->
+                    <svg
+                      class="w-5 h-5 mx-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+
+                <!-- Row 3 -->
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <input
+                      type="checkbox"
+                      class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    TP Sabor chocolate
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">Thrifty Pack</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$200</td>
+                  <td class="px-6 py-4 whitespace-nowrap">14</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$10</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$2,940</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-center">
+                    <!-- Eye icon -->
+                    <svg
+                      class="w-5 h-5 mx-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+
+                <!-- Row 4 -->
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <input
+                      type="checkbox"
+                      class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">TP Sabor arcoiris</td>
+                  <td class="px-6 py-4 whitespace-nowrap">Thrifty Pack</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$200</td>
+                  <td class="px-6 py-4 whitespace-nowrap">22</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$10</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$5,940</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-center">
+                    <!-- Eye icon -->
+                    <svg
+                      class="w-5 h-5 mx-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+
+                <!-- Row 5 -->
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <input
+                      type="checkbox"
+                      class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">TP Sabor fresa</td>
+                  <td class="px-6 py-4 whitespace-nowrap">Thrifty Pack</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$200</td>
+                  <td class="px-6 py-4 whitespace-nowrap">3</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$10</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$630</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-center">
+                    <!-- Eye icon -->
+                    <svg
+                      class="w-5 h-5 mx-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+
+                <!-- Row 6 -->
+                <tr>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <input
+                      type="checkbox"
+                      class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    TP Sabor cacahuate
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">Thrifty Pack</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$200</td>
+                  <td class="px-6 py-4 whitespace-nowrap">29</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$10</td>
+                  <td class="px-6 py-4 whitespace-nowrap">$6,380</td>
+                  <td class="px-6 py-4 whitespace-nowrap text-center">
+                    <!-- Eye icon -->
+                    <svg
+                      class="w-5 h-5 mx-auto"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
