@@ -31,8 +31,6 @@ export interface Product {
   description?: string;
   category: ProductCategory;
   initialQuantity: number;
-  price: number;
-  cost: number;
   imageSrc?: string;
   addedAt: Date;
   branchId: number;
